@@ -2,8 +2,8 @@
   <div :style="{ backgroundColor: `hsl(${x}, 80%, 50%)` }" @mousemove="xCoordinate">
     <p><button @click="increment">+</button> {{ counter }} <button @click="decrement">-</button></p>
     <p>Pixels across: {{ x }}</p>
-    <sample-component />
-</div>
+    <sample-component :message="personal_message" ></sample-component>
+  </div>
 </template>
 
 <script>
@@ -14,7 +14,8 @@ export default {
   data () {
     return {
       counter: 0,
-      x: 0
+      x: 0,
+      personal_message: 'This is what is passed down'
     }
   },
   methods: {

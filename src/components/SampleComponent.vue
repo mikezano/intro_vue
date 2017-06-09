@@ -1,12 +1,18 @@
 <template>
   <div>
-    {{text}}
+    <div>
+      {{text}}
+    </div>
+    <div>
+      {{message}}
+    </div>
   </div>
 </template>
 
 <script>
 
 export default {
+  props: ['message'],
   name: 'hello',
   data () {
     return {
