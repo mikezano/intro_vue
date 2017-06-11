@@ -1,40 +1,31 @@
 <template>
-  <div :style="{ backgroundColor: `hsl(${x}, 80%, 50%)` }" @mousemove="xCoordinate">
-    <p><button @click="increment">+</button> {{ counter }} <button @click="decrement">-</button></p>
-    <p>Pixels across: {{ x }}</p>
-    <sample-component :message="personal_message" ></sample-component>
-  </div>
+	<div :style="{ backgroundColor: `hsl(${x}, 80%, 50%)` }" @mousemove="xCoordinate">
+		<p>Pixels across: {{ x }}</p>
+	</div>
 </template>
 
 <script>
-import SampleComponent from './SampleComponent.vue'
 
 export default {
-  name: 'hello',
-  data () {
-    return {
-      counter: 0,
-      x: 0,
-      personal_message: 'This is what is passed down'
-    }
-  },
-  methods: {
-    increment () {
-      this.counter++
-    },
-    decrement () {
-      this.counter--
-    },
-    xCoordinate (e) {
-      this.x = e.clientX
-    }
-  },
-  components: {
-    SampleComponent
-  }
+	data () {
+		return {
+			x: 0
+		}
+	},
+	methods: {
+		xCoordinate (e) {
+			this.x = e.clientX
+		}
+	}
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+div{
+	width:100%;
+	height:200px;
+}
+
 </style>

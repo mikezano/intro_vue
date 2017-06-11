@@ -3,14 +3,14 @@
     <div>
     {{msg}}, nice to meet Vue.
 
-    <ul>
+    <!--<ul>
       <li v-for="item in items">
         {{item}}
       </li>
-    </ul>
+    </ul>-->
 
     </div>
-    <img src="./assets/logo.png">
+    <img src="./assets/logo.png" width="50" height="50">
    
     <router-view></router-view>
   </div>
@@ -35,6 +35,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 </style>
