@@ -1,27 +1,18 @@
 <template>
 	<div class="hello">
-		<!--<h1>{{ msg }}</h1>-->
 		<h2>Links</h2>
 		<ul>
-			<li><a href="#/hsl" >HSL</a></li>
-			<li><a href="#/incrementer" >Incrementer</a></li>
-			<li><a href="#/send_receive" >Send Receive</a></li>
+			<li><a href="#/hsl" >hsl</a></li>
+			<li><a href="#/incrementer" >incrementer</a></li>
+			<li><a href="#/send_receive" >send receive</a></li>
+			<li><a href="#/sandbox" >sandbox</a></li>
+			<li><a href="#/comments" >comments</a></li>
+			<li><a href="#/slots" >slots</a></li>
 		</ul>
 	</div>
 </template>
 
-<script>
 
-export default {
-
-	name: 'hello',
-	data () {
-		return {
-		msg: 'Welcome to Your Vue.js App'
-		}
-	}
-}
-</script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>

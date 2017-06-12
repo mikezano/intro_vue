@@ -1,19 +1,16 @@
 <template>
-  <div id="app">
-    <div>
-    {{msg}}, nice to meet Vue.
-
-    <!--<ul>
-      <li v-for="item in items">
-        {{item}}
-      </li>
-    </ul>-->
-
-    </div>
-    <img src="./assets/logo.png" width="50" height="50">
+	<div id="app">
+    	<div>
+      		{{msg}}, nice to meet Vue.
+    	</div>
+    
+    	<a href="/">
+			<img src="./assets/logo.png" width="50" height="50">
+		</a>
    
-    <router-view></router-view>
-  </div>
+    	<router-view></router-view>
+
+  	</div>
 </template>
 
 <script>
@@ -22,7 +19,6 @@ export default {
   data () {
     return {
       msg: 'Hello World'
-      // items: ['a', 'b', 'c', 'd', 'e']
     }
   }
 }

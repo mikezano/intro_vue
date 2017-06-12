@@ -1,11 +1,13 @@
 <template>
-	<div :style="{ backgroundColor: `hsl(${x}, 80%, 50%)` }" @mousemove="xCoordinate">
+	<div 
+		:style="{ backgroundColor: `hsl(${x}, 80%, 50%)` }" 
+		@mousemove="xCoordinate" >
+
 		<p>Pixels across: {{ x }}</p>
 	</div>
 </template>
 
 <script>
-
 export default {
 	data () {
 		return {
@@ -25,7 +27,7 @@ export default {
 
 div{
 	width:100%;
-	height:200px;
+	height:400px;
 }
 
 </style>

@@ -7,7 +7,13 @@
 <script>
 
 export default {
-  props: ['message']
+	name: 'receiver',
+	props: {
+		message:{
+			type: String,
+			required: true
+		}
+	}
 }
 </script>
 
