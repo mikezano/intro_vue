@@ -22,9 +22,12 @@ export const store = new Vuex.Store({
 	},
 	actions: {
 		asyncDecrement: ({ commit }, asyncNum) => {
-			setTimeout(() => {
-				commit('decrement', asyncNum.by);
-			}, asyncNum.duration);
+			return new Promise((resolve, reject) => {
+				setTimeout(() => {
+					commit('decrement', asyncNum.by);
+					resolve();
+				}, asyncNum.duration);
+			});
 		}
 	}
 });

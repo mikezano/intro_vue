@@ -38,6 +38,9 @@ export default {
 		...mapMutations(['decrement','increment']),
 		asyncDecrement () {
 			this.$store.dispatch('asyncDecrement', {by: 1, duration: 3000})
+				.then(() =>{
+					alert('decrement!');
+				})
 		}
 	}
 
