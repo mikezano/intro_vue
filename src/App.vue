@@ -12,12 +12,15 @@
 
 		<router-view></router-view>
 
-		<button @click="increment()">+</button>
+		<button @click="increment(2)">+</button>
+		<button @click="decrement()">-</button>
 
 	</div>
 </template>
 
 <script>
+import {mapMutations} from 'vuex'
+
 export default {
 	name: 'app',
 	data () {
@@ -31,9 +34,7 @@ export default {
 		}
 	},
 	methods: {
-		increment () {
-			this.$store.dispatch('increment', 2)
-		}
+		...mapMutations(['decrement','increment'])
 	}
 
 }
