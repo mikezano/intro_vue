@@ -14,6 +14,7 @@
 
 		<button @click="increment(2)">+</button>
 		<button @click="decrement()">-</button>
+		<button @click="asyncDecrement()">Async</button>
 
 	</div>
 </template>
@@ -34,7 +35,10 @@ export default {
 		}
 	},
 	methods: {
-		...mapMutations(['decrement','increment'])
+		...mapMutations(['decrement','increment']),
+		asyncDecrement () {
+			this.$store.dispatch('asyncDecrement', {by: 1, duration: 3000})
+		}
 	}
 
 }
