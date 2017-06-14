@@ -21,6 +21,7 @@ export const store = new Vuex.Store({
 		}
 	},
 	actions: {
+		//parameter deconstruct
 		asyncDecrement: ({ commit }, asyncNum) => {
 			return new Promise((resolve, reject) => {
 				setTimeout(() => {

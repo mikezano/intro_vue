@@ -8,6 +8,7 @@
 			<li><a href="#/sandbox" >sandbox</a></li>
 			<li><a href="#/comments" >comments</a></li>
 			<li><a href="#/slots" >slots</a></li>
+			<li><a href="#/dialog" >dialog</a></li>
 		</ul>
 	</div>
 </template>

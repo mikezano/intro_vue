@@ -7,6 +7,7 @@ import sender from '@/components/sender'
 import sandbox from '@/components/sandbox'
 import comments from '@/components/comments'
 import slots from '@/components/slots'
+import dialog from '@/components/dialog'
 
 Vue.use(Router)
 
@@ -46,6 +47,11 @@ export default new Router({
 			path: '/slots',
 			name: 'slots',
 			component: slots
+		},
+		{
+			path: '/dialog',
+			name: 'dialog',
+			component: dialog
 		}
 	]
 })
