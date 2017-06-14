@@ -1,15 +1,17 @@
 <template>
-	<div>
+	<div class="main">
 		<h3>Let's trigger this here modal!</h3>
 			<button @click="toggleShow">
 			<span v-if="isShowing">Hide child</span>
 			<span v-else>Show child</span>
 		</button>
-		<modal v-if="isShowing" class="modal">
-			<button @click="toggleShow">
-				Close
-			</button>
-		</modal>
+		<transition name="fade">
+			<modal v-if="isShowing" class="modal">
+				<button @click="toggleShow">
+					Close
+				</button>
+			</modal>
+		</transition>
 		<script type="text/x-template" id="childarea">
 			<div>
 				<h2>Here I am!</h2>
@@ -47,7 +49,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-div{
+.main{
 	width:100%;
 	height:400px;
 }
@@ -55,5 +57,12 @@ div{
 .modal{
 	background:linear-gradient(blue, #0071c5);
 	border:1px solid darkblue;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.25s ease-out;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 </style>
