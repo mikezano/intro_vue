@@ -22,8 +22,12 @@ export default {
 		
 		this.randomizePos();
 	
-		this.$el.style.left = this.x + "px";
+		this.$el.style.left = (-1 * this.x) + "px";
 		this.$el.style.top = this.y + "px";
+		this.$el.style.width = this.x/2 + "px";
+		this.$el.style.height = this.x/2 + "px";
+		this.$el.style.borderRadius = this.x/4 + "px";
+		this.$el.style.animationDuration = this.x/10 + "s";
 	}
 }
 </script>
@@ -37,6 +41,12 @@ export default {
 	border-radius:10px;
 	background:linear-gradient(whitesmoke, gray);
 	position:absolute;
+	animation: move linear infinite;
+}
+@keyframes move{
+	100%{
+		left:400px;
+	}
 }
 </style>
 

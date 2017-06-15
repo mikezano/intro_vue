@@ -10,6 +10,7 @@
 			<li><a href="#/slots" >slots</a></li>
 			<li><a href="#/dialog" >dialog</a></li>
 			<li><a href="#/environment" >environment</a></li>
+			<li><a href="#/async" >async</a></li>
 		</ul>
 	</div>
 </template>

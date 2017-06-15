@@ -8,13 +8,7 @@
 			<img src="./assets/logo.png" width="50" height="50">
 		</a>
 
-		<div>{{tripleCounter}}</div>
-
 		<router-view></router-view>
-
-		<button @click="increment(2)">+</button>
-		<button @click="decrement()">-</button>
-		<button @click="asyncDecrement()">Async</button>
 
 	</div>
 </template>
@@ -23,27 +17,11 @@
 import {mapMutations} from 'vuex'
 
 export default {
-	name: 'app',
 	data () {
 		return {
 			msg: 'Hello World'
 		}
-	},
-	computed: {
-		tripleCounter() {
-			return this.$store.getters.tripleCounter;
-		}
-	},
-	methods: {
-		...mapMutations(['decrement','increment']),
-		asyncDecrement () {
-			this.$store.dispatch('asyncDecrement', {by: 1, duration: 3000})
-				.then(() =>{
-					alert('decrement!');
-				})
-		}
 	}
-
 }
 </script>
 

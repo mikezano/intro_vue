@@ -9,6 +9,7 @@ import comments from '@/components/comments'
 import slots from '@/components/slots'
 import dialog from '@/components/dialog'
 import sky from '@/components/environment/sky'
+import async from '@/components/async'
 
 Vue.use(Router)
 
@@ -58,6 +59,11 @@ export default new Router({
 			path: '/environment',
 			name: 'environment',
 			component: sky
-		}		
+		},
+		{
+			path: '/async',
+			name: 'async',
+			component: async
+		}					
 	]
 })
