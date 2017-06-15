@@ -9,6 +9,7 @@
 			<li><a href="#/comments" >comments</a></li>
 			<li><a href="#/slots" >slots</a></li>
 			<li><a href="#/dialog" >dialog</a></li>
+			<li><a href="#/environment" >environment</a></li>
 		</ul>
 	</div>
 </template>

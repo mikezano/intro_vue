@@ -1,11 +1,4 @@
-<template>
-	<div 
-		:style="{ backgroundColor: `hsl(${x}, 80%, 50%)` }" 
-		@mousemove="xCoordinate" >
 
-		<p>Pixels across: {{ x }}</p>
-	</div>
-</template>
 
 <script>
 export default {
@@ -29,5 +22,14 @@ div{
 	width:100%;
 	height:400px;
 }
-
 </style>
+
+
+<template>
+	<div 
+		:style="{ backgroundColor: `hsl(${x}, 80%, 50%)` }" 
+		@mousemove="xCoordinate" >
+
+		<p>Pixels across: {{ x }}</p>
+	</div>
+</template>

@@ -8,6 +8,7 @@ import sandbox from '@/components/sandbox'
 import comments from '@/components/comments'
 import slots from '@/components/slots'
 import dialog from '@/components/dialog'
+import sky from '@/components/environment/sky'
 
 Vue.use(Router)
 
@@ -52,6 +53,11 @@ export default new Router({
 			path: '/dialog',
 			name: 'dialog',
 			component: dialog
-		}
+		},
+		{
+			path: '/environment',
+			name: 'environment',
+			component: sky
+		}		
 	]
 })

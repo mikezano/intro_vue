@@ -1,5 +1,8 @@
 <template>
+
 	<div class="main">
+				<hello></hello>
+				<ball v-if="isShowing"></ball>
 		<h3>Let's trigger this here modal!</h3>
 			<button @click="toggleShow">
 				<span v-if="isShowing">Hide child</span>
@@ -45,6 +48,10 @@ const Ball = {
 	template: '#ball'
 }
 
+const Hello ={
+	template: '<div>Hello</div>'
+}
+
 export default {
   	data() {
     	return {
@@ -62,7 +69,8 @@ export default {
   	},
   	components: {
    		modal: Child,
-		ball: Ball
+		ball: Ball,
+		hello: Hello
  	}
 }
 </script>
